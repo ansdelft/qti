@@ -56,9 +56,9 @@ module Qti
 
         def filter_item_body(node)
           # Filter undesired interaction nodes out of the list (need to make this a deep traversal)
-          node.children.filter(INTERACTION_ELEMENTS_CSS).map(&:unlink)
+          node.css(INTERACTION_ELEMENTS_CSS).map(&:unlink)
           # Filter out rubrics
-          node.children.filter('rubricBlock').map(&:unlink)
+          node.css('rubricBlock').map(&:unlink)
           # Filter out stimulus passages (these will be handled separately)
           filter_stimulus_passages!(node)
         end

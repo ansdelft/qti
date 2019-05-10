@@ -8,18 +8,19 @@ module Qti
       def taxonpaths
         return unless lom
         hier = Hash.new { |h, k| h[k] = [] }
-        lom.xpath('imsmd:classification/imsmd:taxonPath').each do |tp|
+
+        lom.xpath('imsmd:classification/imsmd:taxonpath').each do |tp|
           entry = taxonpath_entry(tp)
           hier[entry[:source]] = entry[:taxonpath]
         end
         hier
       end
 
-      private
+      # private
 
       def taxonpath_entry(node)
         {
-          source: node.xpath('imsmd:source/imsmd:string').text,
+          source: node.xpath('imsmd:source/imsmd:langstring').text,
           taxonpath: taxons(node)
         }
       end

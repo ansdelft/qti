@@ -45,7 +45,7 @@ module Qti
 
       def taxon(node, path)
         return path unless node
-        xpath = 'imsmd:taxon/imsmd:entry/*[self::imsmd:string or self::imsmd:langstring or self::imsmd:comment]'
+        xpath = 'imsmd:taxon/imsmd:comment/*[self::imsmd:string or self::imsmd:langstring]|imsmd:taxon/imsmd:entry/*[self::imsmd:string or self::imsmd:langstring]'
         node.xpath(xpath).each do |taxon|
           lang = taxon.attr('language') || taxon.attr('lang') || taxon.attr('xml:lang') || 'default'
           path[lang].push(taxon.text)

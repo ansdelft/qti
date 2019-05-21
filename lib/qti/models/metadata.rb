@@ -20,7 +20,7 @@ module Qti
 
       def taxonpath_entry(node)
         {
-          source: node.xpath('imsmd:source/imsmd:langstring').text,
+          source: node.xpath('imsmd:comment/imsmd:langstring|imsmd:source/imsmd:langstring').text,
           taxonpath: taxons(node)
         }
       end

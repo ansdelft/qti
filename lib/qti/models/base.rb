@@ -31,7 +31,6 @@ module Qti
         @doc unless html
       end
 
-*
       def xpath_with_single_check(xpath)
         node_list = @doc.xpath(xpath)
         raise Qti::ParseError, 'Too many matches' if node_list.count > 1

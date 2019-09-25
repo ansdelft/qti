@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'rubyzip', '~> 1.2'
   s.add_dependency 'nokogiri', '~> 1.8'
   s.add_dependency 'sanitize', '~> 4.6', '>= 4.6.3'
-  s.add_dependency 'actionview', '>= 5.0.7', '< 5.3'
+  s.add_dependency 'actionview', '>= 5.0.7'
   s.add_dependency 'mathml2latex', '~> 1.0'
 
   s.add_development_dependency 'bundler', '~> 1.15'

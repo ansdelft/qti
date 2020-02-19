@@ -5,6 +5,7 @@ module Qti
         ScoringData = Struct.new(:values, :type)
 
         def item_body
+          byebug
           @item_body ||= begin
             node = item_body_node.dup
             # ensure a prompt is carried into the html
@@ -32,6 +33,7 @@ module Qti
         end
 
         def interaction_model
+          byebug
           @interaction_model ||= begin
             V2::Models::Interactions.interaction_model(@doc, self)
           end

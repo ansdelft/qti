@@ -5,7 +5,7 @@ module Qti
         class ShortTextInteraction < BaseInteraction
           # This will know if a class matches
           def self.matches(node, parent)
-            matches = node.xpath('.//xmlns:textEntryInteraction')
+            matches = node.xpath('.//xmlns:textEntryInteraction') + node.xpath('.//xmlns:textentryinteraction')
             return false if matches.empty?
 
             raise Qti::UnsupportedSchema if matches.size > 1

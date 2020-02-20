@@ -4,7 +4,6 @@ module Qti
       module Interactions
         class InlineChoiceInteraction < BaseInteraction
           def self.matches(node, parent)
-            byebug
             match = node.at_xpath('.//xmlns:inlineChoiceInteraction')
             return false unless match.present?
             new(node, parent)

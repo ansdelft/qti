@@ -8,7 +8,7 @@ module Qti
             matches = node.xpath('.//xmlns:textEntryInteraction') + node.xpath('.//xmlns:textentryinteraction')
             return false if matches.empty?
 
-            raise Qti::UnsupportedSchema if matches.size > 1
+            # raise Qti::UnsupportedSchema if matches.size > 1
             new(matches.first, parent)
           end
         end

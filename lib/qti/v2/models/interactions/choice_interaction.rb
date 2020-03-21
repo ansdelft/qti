@@ -7,7 +7,6 @@ module Qti
             matches = node.xpath('.//xmlns:choiceInteraction')
             return false if matches.empty?
 
-            raise Qti::UnsupportedSchema if matches.size > 1
             new(matches.first, parent)
           end
 

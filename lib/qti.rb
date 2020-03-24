@@ -147,6 +147,7 @@ require 'qti/v2/models/interactions/match_interaction'
 require 'qti/v2/models/interactions/ordering_interaction'
 require 'qti/v2/models/interactions/short_text_interaction'
 require 'qti/v2/models/interactions/inline_choice_interaction'
+require 'qti/v2/models/interactions/select_point_interaction'
 
 require 'qti/v2/models/interactions/match_item_tag_processors/associate_interaction_tag_processor'
 require 'qti/v2/models/interactions/match_item_tag_processors/match_interaction_tag_processor'

@@ -1,3 +1,4 @@
+require 'forwardable'
 require_relative 'match_item_tag_processors/match_interaction_tag_processor'
 require_relative 'match_item_tag_processors/associate_interaction_tag_processor'
 

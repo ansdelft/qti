@@ -1,7 +1,7 @@
 module Qti
   module ContentPackaging
     class ChoiceInteraction < Dry::Struct
-      constructor_type :schema
+      # constructor_type :schema
 
       attribute :prompt, Types::Strict::String
       attribute :shuffle, Types::Strict::Bool.default(false)

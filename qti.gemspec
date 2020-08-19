@@ -17,13 +17,13 @@ Gem::Specification.new do |s|
   s.require_paths = ['lib']
 
   # s.add_dependency 'mathml2latex', '~> 1.0'
-  s.add_dependency 'actionview', '>= 5.1.7'
-  s.add_dependency 'activesupport', '>= 5.1.7'
-  s.add_dependency 'dry-struct', '~> 0.4.0'
-  s.add_dependency 'dry-types', '~> 0.14'
+  s.add_dependency 'actionview', '>= 6.0'
+  s.add_dependency 'activesupport', '>= 6.0'
+  s.add_dependency 'dry-struct', '~> 1.3'
+  s.add_dependency 'dry-types', '~> 1.4'
   s.add_dependency 'nokogiri', '~> 1.10'
-  s.add_dependency 'rubyzip', '~> 2.0'
-  s.add_dependency 'sanitize', '~> 5.1'
+  s.add_dependency 'rubyzip', '~> 2.3'
+  s.add_dependency 'sanitize', '~> 5.2'
 
   s.required_ruby_version = '>= 2.4'
 

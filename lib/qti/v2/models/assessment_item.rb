@@ -7,10 +7,7 @@ module Qti
         def item_body
           @item_body ||= begin
             node = item_body_node.dup
-            # ensure a prompt is carried into the html
-            prompt = node.at_xpath('//xmlns:prompt')
             filter_item_body(node)
-            node.add_child(prompt) if prompt&.parent && prompt.parent != node
             sanitize_content!(node.to_html)
           end
         end

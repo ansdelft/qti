@@ -23,9 +23,9 @@ Gem::Specification.new do |s|
   s.add_dependency 'dry-types', '~> 1.4'
   s.add_dependency 'nokogiri', '~> 1.10'
   s.add_dependency 'rubyzip', '~> 2.3'
-  s.add_dependency 'sanitize', '~> 5.2'
+  s.add_dependency 'sanitize', '>= 5.3'
 
-  s.required_ruby_version = '>= 2.4'
+  s.required_ruby_version = '>= 2.6'
 
   s.add_development_dependency 'bundler', '~> 2.1'
   s.add_development_dependency 'byebug', '~> 11.0'

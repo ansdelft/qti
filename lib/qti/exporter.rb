@@ -157,7 +157,7 @@ module Qti
     end
 
     def compress_package
-      Zip::File.open(exported_file_path, 'w') do |zipfile|
+      Zip::File.open(exported_file_path, create: true) do |zipfile|
         add_all_files(zipfile, package_root_path)
       end
 
